@@ -8,7 +8,7 @@
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
         <!--========== CSS ==========-->
-        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/css/styles.css') }}">
+        <link rel= "stylesheet" type= "text/css" href= "/static/styles/css/styles.css">
 
         <title>Silver Leaf</title>
     </head>
@@ -31,12 +31,12 @@
                         <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
                         <!-- <li class="nav__item"><a href="{{ url_for('login_page') }}" class="nav__link">Log in</a></li>
                         <li class="nav__item"><a href="{{ url_for('register_page') }}" class="nav__link">Register</a></li> -->
-                        {% if current_user.is_authenticated %}
+                        <!-- {% if current_user.is_authenticated %} -->
                         <li class="nav__item"><a href="{{ url_for('logout') }}" class="nav__link">Log Out</a></li>
-                        {% else %}
+                        <!-- {% else %} -->
                         <li class="nav__item"><a href="{{ url_for('login_page') }}" class="nav__link">Log in</a></li>
                         <li class="nav__item"><a href="{{ url_for('login_page') }}" class="nav__link">Register</a></li>
-                        {% endif %}
+                        <!-- {% endif %} -->
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
 
                         <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
@@ -76,7 +76,7 @@
                         <a href="#" class="button">Explore history</a>
                     </div>
 
-                    <img src="static/styles/img/about.jpg" alt="" class="about__img">
+                    <img src="/static/styles/img/about.jpg" alt="" class="about__img">
                 </div>
             </section>
 
@@ -389,7 +389,7 @@
             <div class="footer__container bd-grid">
                 <div class="footer__content">
                     <a href="#" class="footer__logo">Silver Leaf</a>
-                    <span class="footer__description">Restaurant</span>
+                    <span class="footer__description">RESTURANT</span>
                     <div>
                         <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
                         <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
@@ -441,6 +441,6 @@
         <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--========== MAIN JS ==========-->
-        <script src="static/styles/js/main.js"></script>
+        <script src="/static/styles/js/main.js"></script>
     </body>
 </html>
